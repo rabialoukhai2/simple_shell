@@ -14,10 +14,10 @@
 #include <fcntl.h>
 #include <errno.h>
 
-
 #define DELIMINATOR "\n\r\t\a "
 #define BUFFERSIZE 1024
-extern char **environ;
+
+
 
 
 /**
@@ -31,4 +31,4 @@ typedef struct list_s
 	struct list_s *next;
 } list_t;
 
-extern char *head;
+
