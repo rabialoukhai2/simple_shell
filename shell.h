@@ -17,9 +17,6 @@
 /* declar buffer */
 #define BUFFERSIZE 1024
 
-
-
-
 /**
  * struct list_s - singly linked list struct node
  */
