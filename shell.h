@@ -1,8 +1,7 @@
 #ifndef SHELL_H
 #define SHELL_H
 
-
-
+/* import built-in functionalites */ 
 #include <sys/types.h>
 #include <sys/wait.h>
 #include <stdlib.h>
@@ -15,6 +14,7 @@
 #include <errno.h>
 
 #define DELIMINATOR "\n\r\t\a "
+/* declar buffer */
 #define BUFFERSIZE 1024
 
 
