@@ -93,7 +93,7 @@ while (s2[j] != '\0')
 j++;
 
 size = i + j + 1;
-temp = malloc(size * sizeof(char));
+temp = malloc(size *sizeof(char));
 if (temp == NULL)
 return (NULL);
 
