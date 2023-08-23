@@ -9,7 +9,7 @@
 
 int fn1(char **str, char **env)
 {
-pid_t pid, wpid;
+/* pid_t pid, wpid; */
 int i = 0;
 char *copy = NULL;
 copy = _strdup(str[0]);
