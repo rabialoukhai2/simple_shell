@@ -1,5 +1,6 @@
 #ifndef SHELL_H
 #define SHELL_H
+
 /* import built-in fn header */ 
 #include <signal.h>
 #include <limits.h>
@@ -16,7 +17,7 @@ extern char **environ;
 /* decalre buffers */
 #define BUFFERSIZE 1024
 
-/* declare deliminator*/ 
+/* declare deliminator */ 
 #define DELIMINATOR "\n\r\t\a "
 
 /**
