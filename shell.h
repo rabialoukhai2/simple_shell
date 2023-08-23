@@ -1,6 +1,5 @@
 #ifndef SHELL_H
 #define SHELL_H
-
 /* import built-in fn header */ 
 #include <signal.h>
 #include <limits.h>
@@ -12,7 +11,6 @@
 #include <string.h>
 #include <unistd.h>
 #include <sys/types.h>
-
 extern char **environ;
 
 /* decalre buffers */
@@ -27,11 +25,10 @@ extern char **environ;
 
 typedef struct list_s
 {
-	char *str;
-	unsigned int len;
-	struct list_s *next;
+char *str;
+unsigned int len;
+struct list_s *next;
 } list_t;
-
 extern char *head;
 
 /* shell */
