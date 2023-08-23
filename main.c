@@ -31,8 +31,8 @@ return (0);
 
 /**
  *  ctrl_c_hdlr - Handles ctrl C
- * @sig_num: signal 
- * Return: file 
+ * @sig_num: signal
+ * Return: file
  */
 
 void ctrl_c_hdlr(int sig_num __attribute__((unused)))
