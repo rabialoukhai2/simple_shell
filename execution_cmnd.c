@@ -153,37 +153,48 @@ return (0);
  * Return: multiple returns
  */
 
-int check_inp(char **str, char **env) {
+int check_inp(char **str, char **env)
+{
 char *copy = strdup(str[0]);
-if (copy == NULL) {
+if (copy == NULL)
+{
 perror("hsh");
-return 1;
+return (1);
 }
 
-if (access(str[0], R_OK | X_OK) == 0) {
+if (access(str[0], R_OK | X_OK) == 0)
+{
 pid_t pid = fork();
-if (pid == 0) {
+if (pid == 0)
+{
 execve(str[0], str, env);
 perror("hsh");
 exit(EXIT_FAILURE);
-} else if (pid > 0) {
+}
+else if (pid > 0)
+{
 int status;
 waitpid(pid, &status, 0);
 free(copy);
 return WIFEXITED(status);
-} else {
+}
+else
+{
 perror("hsh");
 }
-} else {
+}
+else
+{
 char *sep = "/";
-if (strstr(copy, sep) != NULL) {
+if (strstr(copy, sep) != NULL)
+{
 errno = ENOENT;
 perror("hsh");
 free(copy);
-return 1;
+return (1);
 }
 }
 
 free(copy);
-return 0;
+return (0);
 }
