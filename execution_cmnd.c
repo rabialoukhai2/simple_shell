@@ -155,42 +155,24 @@ return (0);
 
 int check_inp(char **str, char **env)
 {
-char *copy = strdup(str[0]);
-if (copy == NULL)
-{
-perror("hsh");
-return (1);
-}
-
-if (access(str[0], R_OK | X_OK) == 0)
-{
-pid_t pid = fork();
-if (pid == 0)
-{
-execve(str[0], str, env);
-perror("hsh");
-exit(EXIT_FAILURE);
-}
-else if (pid > 0)
-{
-int status;
-waitpid(pid, &status, 0);
-free(copy);
-return (WIFEXITED(status));
-}
-else
-{
-perror("hsh");
-}
-}
-else
-{
+pid_t pid, wpid;
+int id = 0, i = 0;
 char *sep = "/";
-if (strstr(copy, sep) != NULL)
+char *copy = NULL;
+
+copy = _strdup(str[0]);
+if ((access(str[0], R_OK | X_OK)) == 0)
+{
+int result = fn1(str, env);
+return (result);
+}
+else if (copy != NULL)
+{
+for (i = 0; copy[i] != '\0'; i++)
+if (copy[i] == sep[0])
 {
 errno = ENOENT;
-perror("hsh");
-free(copy);
+perror("hsh"), free(copy);
 return (1);
 }
 }
