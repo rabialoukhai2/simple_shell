@@ -176,7 +176,7 @@ else if (pid > 0)
 int status;
 waitpid(pid, &status, 0);
 free(copy);
-return WIFEXITED(status);
+return (WIFEXITED(status));
 }
 else
 {
@@ -194,7 +194,6 @@ free(copy);
 return (1);
 }
 }
-
 free(copy);
 return (0);
 }
