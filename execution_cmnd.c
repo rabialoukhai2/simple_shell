@@ -96,7 +96,8 @@ if (args != NULL && (_strcmp(args, str)) == 0)
 {
 path = _strdup(env[i]);
 
-while (args[++len]);
+while (args[++len])
+;
 len2 = len + 1;
 id = _strlength(path) - len2;
 i = 0;
