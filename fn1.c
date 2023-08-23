@@ -13,7 +13,6 @@ pid_t pid, wpid;
 int id = 0, i = 0;
 char *sep = "/";
 char *copy = NULL;
-  
 pid = fork();
 if (pid == 0)
 {
