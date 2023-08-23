@@ -2,6 +2,8 @@
 
 /**
  * _strlength - returns the length of a str
+ * @str: string
+ * Return: lenght
  */
 
 int _strlength(char *str)
@@ -17,6 +19,8 @@ return (length);
 
 /**
  * _putchar - writes the character c to stdout
+ * @c: chara
+ * Return: chara
  */
 
 int _putchar(char c)
@@ -26,6 +30,8 @@ return (write(1, &c, 1));
 
 /**
  * _puts -  print str
+ * @str: string
+ * Return: the string and new line
  */
 
 void _puts(char *str)
@@ -40,6 +46,9 @@ _putchar('\n');
 
 /**
  * _strcmp - compare strs
+ * @str1: string
+ * @str2: string
+ * Return: string or 0
  */
 
 int _strcmp(char *str1, char *str2)
@@ -59,6 +68,8 @@ return (0);
 
 /**
  * _strdup - cp str given as a param.
+ * @str: string
+ * Return: copied string or 0
  */
 
 char *_strdup(const char *str)
