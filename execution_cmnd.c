@@ -155,8 +155,10 @@ return (0);
 
 int check_inp(char **str, char **env)
 {
-pid_t pid, wpid;
-int id = 0, i = 0;
+pid_t;
+/*  pid,wpid; */
+/* int id = 0; */
+int i = 0;
 char *sep = "/";
 char *copy = NULL;
 
