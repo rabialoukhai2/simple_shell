@@ -2,8 +2,8 @@
 
 /**
  *  _exit_stoi - stoi for exit status
- * @str: pointer of text 
- * Return: resukt or 1 
+ * @str: pointer of text
+ * Return: resukt or 1
  */
 
 int _exit_stoi(char *str)
