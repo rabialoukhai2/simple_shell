@@ -163,7 +163,7 @@ char *copy = NULL;
 copy = _strdup(str[0]);
 if ((access(str[0], R_OK | X_OK)) == 0)
 {
-fn1(str,env);
+fn1(str, env);
 }
 else if (copy != NULL)
 {
