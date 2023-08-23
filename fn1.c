@@ -3,35 +3,33 @@
 /**
  * fn1 - Checks if the input
  * @str: string
- * @env: environment
+ * @env: environement
  * Return: multiple 1
  */
 
 int fn1(char **str, char **env)
 {
-/* pid_t pid, wpid; */
-int i = 0;
+pid_t pid, wpid;
+int id = 0;
 char *copy = NULL;
-copy = _strdup(str[0]);
-if ((access(str[0], R_OK | X_OK)) == 0)
+pid = fork();
+if (pid == 0)
 {
-int result = execute_and_check(str, env);
-free(copy);
-return (result);
-}
-else if (copy != NULL)
+id = execve(str[0], str, env);
+if (id == -1)
 {
-for (i = 0; copy[i] != '\0'; i++)
-{
-if (copy[i] == '/')
-{
-errno = ENOENT;
 perror("hsh");
+}
+exit(EXIT_SUCCESS);
+}
+else if (pid < 0)
+perror("hsh");
+else
+do {
+wpid = waitpid(pid, &id, WUNTRACED);
+if (wpid == -1)
+perror("hsh");
+} while (!WIFSIGNALED(id) && !WIFEXITED(id));
 free(copy);
 return (1);
-}
-}
-}
-free(copy);
-return (0);
 }
