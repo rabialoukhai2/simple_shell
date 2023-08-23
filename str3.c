@@ -2,6 +2,8 @@
 
 /**
  *  _exit_stoi - stoi for exit status
+ * @str: pointer of text 
+ * Return: resukt or 1 
  */
 
 int _exit_stoi(char *str)
@@ -36,6 +38,8 @@ return (result);
 
 /**
  *  _isdig - Finds if char is a digit or not
+ * @str: string
+ * Return: 0 | 1
  */
 
 int _isdig(char str)
@@ -49,6 +53,9 @@ return (0);
 
 /**
  * _strcopy - Prnt a string
+ * @dest:  destination
+ * @src: source coppied str
+ * Return: destination
  */
 
 char *_strcopy(char *dest, char *src)
