@@ -2,10 +2,12 @@
 
 /**
  * fn1 - Checks if the input
+ * @str: string
+ * @env: environement
  * Return: multiple 1
  */
 
-int fn1(void)
+int fn1(char **str, char **env)
 {
 pid_t pid, wpid;
 int id = 0, i = 0;
