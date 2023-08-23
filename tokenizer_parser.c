@@ -28,7 +28,7 @@ char **parse_ln(char *line)
 	if (location >= buffer_size)
 	{
 		buffer_size += BUFFERSIZE;
-		tokens = _reallocat(tokens, BUFFERSIZE,buffer_size * sizeof(char *));
+		tokens = _reallocat(tokens, BUFFERSIZE, buffer_size * sizeof(char *));
 
 		if (!tokens)
 		{
