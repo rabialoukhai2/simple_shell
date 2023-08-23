@@ -3,6 +3,9 @@
 
 /**
  * calling_unsetenv - take user var and unsets environments vars
+ * @env: environe
+ * @str: string
+ * Return: 1
  */
 
 int calling_unsetenv(char **env, char **str)
@@ -29,6 +32,9 @@ return (1);
 
 /**
  *calling_setenv - setenv builtin
+ * @env: environem
+ * @str: string
+ * Return: 1
  */
 
 int calling_setenv(char **env, char **str)
