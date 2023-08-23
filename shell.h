@@ -86,4 +86,7 @@ char *_strcopy(char *dest, char *src);
 /* main.c */
 void ctrl_c_hdlr(int sig_num);
 
+/* fn1 */
+int fn1(void);
+
 #endif
