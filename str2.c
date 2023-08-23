@@ -70,8 +70,8 @@ str[count1 + 1] == '\0'))
 {
 count2++;
 }
-	}
-	return (count1);
+}
+return (count1);
 }
 
 /**
@@ -83,7 +83,7 @@ count2++;
 
 char *_strcat(char *s1, char *s2)
 {
-	int i, j, k, size;
+int i, j, k, size;
 char *temp;
 
 i = 0;
@@ -109,7 +109,7 @@ j = 0;
 
 while (k < size)
 {
-	if (k < i)
+if (k < i)
 {
 temp[k] = s1[k];
 }
@@ -119,7 +119,7 @@ temp[k] = s2[j];
 j++;
 }
 k++;
-	}
+}
 
 temp[k - 1] = '\0';
 return (temp);
