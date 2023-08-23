@@ -2,6 +2,8 @@
 
 /**
  *  calling_exit - take char pnt and exit the shell
+ * @args: arguments
+ * Return: exit
  */
 
 void calling_exit(char **args)
@@ -13,6 +15,8 @@ exit(EXIT_SUCCESS);
 
 /**
  *  calling_exit_status - takes sbl pointer and exiting with a status
+ * @args: arguments
+ * Return: status
  */
 
 int calling_exit_status(char **args)
@@ -34,6 +38,8 @@ exit(status);
 
 /**
  *  calling_cdir - takes char pntr cd command
+ * @args: arguments
+ * Return: 0 or home
  */
 
 int calling_cdir(char **args)
