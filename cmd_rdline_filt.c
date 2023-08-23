@@ -2,6 +2,8 @@
 
 /**
  * read_ln - Rd arguments w/ getline
+ * @void: void
+ * Return: 0 or line
  */
 
 char *read_ln(void)
@@ -23,6 +25,9 @@ return (line);
 
 /**
  * funct_filter - Filters commands(fn) built-ins
+ * @commands: coamnd
+ * @env: envir
+ * Return: option
  */
 
 int funct_filter(char **commands, char **env)
