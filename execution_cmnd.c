@@ -148,38 +148,6 @@ return (0);
 }
 
 /**
- * fn1 - Checks if the input
- * @str: string
- * @env: environement
- * Return: multiple 1
- */
-
-int fn1()
-{
-pid = fork();
-if (pid == 0)
-{
-id = execve(str[0], str, env);
-if (id == -1)
-{
-perror("hsh");
-}
-exit(EXIT_SUCCESS);
-}
-else if (pid < 0)
-perror("hsh");
-else
-do
-{
-wpid = waitpid(pid, &id, WUNTRACED);
-if (wpid == -1)
-perror("hsh");
-} while (!WIFSIGNALED(id) && !WIFEXITED(id));
-free(copy);
-return (1);
-}
-
-/**
  * check_inp - Checks if the input is already a path
  * @str: string
  * @env: environement
