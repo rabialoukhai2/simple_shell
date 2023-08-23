@@ -22,6 +22,9 @@ extern char **environ;
 
 /**
  * struct list_s - singly linked list
+ * @str: a string
+ * @len: the number of field
+ * @next: point to the next node
  */
 
 typedef struct list_s
