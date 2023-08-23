@@ -2,6 +2,9 @@
 
 /**
  * execu_cmd - TakesThe  array_vectorized of user inp in a command to execute
+ * @str: string poin
+ * @env: env ppoi
+ * Return: 1 or null
  */
 
 int execu_cmd(char **str, char **env)
@@ -48,6 +51,12 @@ return (1);
 
 /**
  * inp_check - Save the space!
+ * @str: string
+ * @env: environement
+ * @newstr: nnew string
+ * @path: the path file
+ * @new2: new enviro
+ * Return: 1 or 0
  */
 
 int inp_check(char **str, char **env, char *newstr, char *path, char *new2)
@@ -66,6 +75,9 @@ return (0);
 
 /**
  * _getenviro - search & finds the envir of variable
+ * @env: enviro
+ * @str: string
+ * Return: null or env 
  */
 
 char *_getenviro(char **env, char *str)
@@ -107,6 +119,9 @@ return (NULL);
 
 /**
  * enviro_var - Finds index of variable in such the envir
+ * @env: environement
+ * @str: string
+ * Return: 0
  */
 
 int enviro_var(char **env, char *str)
@@ -133,6 +148,9 @@ return (0);
 
 /**
  * check_inp - Checks if the input is already a path
+ * @str: string
+ * @env: environement
+ * Return: multiple returns
  */
 
 int check_inp(char **str, char **env)
