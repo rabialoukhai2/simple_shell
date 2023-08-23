@@ -2,6 +2,7 @@
 
 /**
  * parse_ln - Put arguments in the arr
+ * @line: caharachter line will  parsed
  */
 
 char **parse_ln(char *line)
