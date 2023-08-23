@@ -1,8 +1,8 @@
 #include "shell.h"
 
 /**
- * _reallocat -  return the new size of an array reallocating 
- * the space for a memory block
+ * _reallocat - return the new size of an array reallocating
+ *  the space for a memory block
  */
 
 void *_reallocat(void *ptr, unsigned int old_size, unsigned int new_size)
