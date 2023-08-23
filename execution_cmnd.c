@@ -164,7 +164,7 @@ copy = _strdup(str[0]);
 if ((access(str[0], R_OK | X_OK)) == 0)
 {
 int result = fn1(str, env);
-return result;
+return (result);
 }
 else if (copy != NULL)
 {
