@@ -1,7 +1,8 @@
 #include "shell.h"
 
 /**
- * _getchar - Gets a character
+ * _getchar - Gets character
+ * Return: Void or buffer
  */
 
 int _getchar(void)
@@ -23,6 +24,8 @@ return (EOF);
 
 /**
  * _stoi - Convert a string to an integer.
+ * @s: sign
+ * Return: Integer
  */
 
 int _stoi(char *s)
@@ -52,6 +55,8 @@ return (result *= sign % 2 == 0 ? -1 : 1);
 
 /**
  * word_counter - Counts words
+ * @str: string
+ * Return: integer count
  */
 
 int word_counter(char *str)
@@ -71,6 +76,9 @@ count2++;
 
 /**
  * _strcat - Adds two strs together
+ * @s1: string
+ * @s2: string
+ * Return: temp
  */
 
 char *_strcat(char *s1, char *s2)
