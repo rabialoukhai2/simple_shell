@@ -77,7 +77,7 @@ return (0);
  * _getenviro - search & finds the envir of variable
  * @env: enviro
  * @str: string
- * Return: null or env 
+ * Return: null or env
  */
 
 char *_getenviro(char **env, char *str)
@@ -96,8 +96,7 @@ if (args != NULL && (_strcmp(args, str)) == 0)
 {
 path = _strdup(env[i]);
 
-while (args[++len])
-;
+while (args[++len]);
 len2 = len + 1;
 id = _strlength(path) - len2;
 i = 0;
