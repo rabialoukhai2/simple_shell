@@ -40,8 +40,7 @@ exit(EXIT_SUCCESS);
 else if (pid < 0)
 perror("hsh");
 else
-do
-{
+do{
 wpid = waitpid(pid, &id, WUNTRACED);
 if (wpid == -1)
 perror("hsh");
