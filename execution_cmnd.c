@@ -37,8 +37,7 @@ exit(EXIT_SUCCESS);
 else if (pid < 0)
 perror("hsh");
 else
-do
-{
+do{
 wpid = waitpid(pid, &id, WUNTRACED);
 if (wpid == -1)
 perror("hsh");
@@ -107,7 +106,7 @@ return (NULL);
 }
 
 /**
- * enviro_var - Finds index of variable in such the envir 
+ * enviro_var - Finds index of variable in such the envir
  */
 
 int enviro_var(char **env, char *str)
@@ -159,8 +158,7 @@ exit(EXIT_SUCCESS);
 else if (pid < 0)
 perror("hsh");
 else
-do
-{
+do{
 wpid = waitpid(pid, &id, WUNTRACED);
 if (wpid == -1)
 perror("hsh");

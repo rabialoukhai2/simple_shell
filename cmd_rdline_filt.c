@@ -28,7 +28,7 @@ return (line);
 int funct_filter(char **commands, char **env)
 {
 int option = 0;
-char *builtin[7] = {"exit", "cd", "env", "unsetenv","setenv", NULL};
+char *builtin[7] = {"exit", "cd", "env", "unsetenv", "setenv", NULL};
 if (commands[0] == NULL)
 return (1);
 while (builtin[option] != NULL)
