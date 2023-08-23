@@ -3,6 +3,10 @@
 /**
  * _reallocat - return the new size of an array reallocating
  *  the space for a memory block
+ * @ptr: pointer
+ * @old_size: old size
+ * @new_size: new size
+ * Return: new pointer of size
  */
 
 void *_reallocat(void *ptr, unsigned int old_size, unsigned int new_size)
