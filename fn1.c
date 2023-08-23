@@ -21,7 +21,8 @@ return (result);
 }
 else if (copy != NULL)
 {
-for (i = 0; copy[i] != '\0'; i++) {
+for (i = 0; copy[i] != '\0'; i++)
+{
 if (copy[i] == '/')
 {
 errno = ENOENT;
