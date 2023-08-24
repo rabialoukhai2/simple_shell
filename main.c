@@ -1,10 +1,8 @@
 #include "main.h"
 
 /**
- * main
- *
- *
- *Return: 0 Always
+ * main - main function
+ * Return: 0 Always
  */
 
 int main(void)
@@ -19,8 +17,7 @@ int main(void)
 	while (1)
 	{
 		if (is_interactive)
-			tests()
-		
+			tests();
 		else
 		{
 			chars_read = getline(&command, &bufsize, stdin);
