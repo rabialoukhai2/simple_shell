@@ -43,7 +43,7 @@ int main(void)
 				break;
 		}
 		command[strcspn(command, "\n")] = '\0';
-		tokenize_command(command, args);
+		tokenizer(command, args);
 	}
 	free(command);
 	return (0);

@@ -28,5 +28,5 @@ void tokenizer(char *command, char *args[])
 	{
 		exit(0);
 	}
-	execute_command(args);
+	execute_cmd(args);
 }
