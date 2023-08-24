@@ -11,6 +11,6 @@
 
 void execute_cmd(char *args[]);
 void tokenizer(char *command, char *args[]);
-int tests();
+int tests(void);
 
 #endif
