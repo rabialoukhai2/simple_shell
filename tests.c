@@ -3,7 +3,7 @@
  * tests - f n for testing
  * Return: 1
  */
-int tests()
+int tests(void)
 {
 	if (chars_read == -1)
 			{
