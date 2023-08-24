@@ -11,6 +11,6 @@
 
 void execute_cmd(char *args[]);
 void tokenizer(char *command, char *args[]);
-int tests(void);
+int tests(ssize_t chars_read);
 
 #endif
