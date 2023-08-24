@@ -17,7 +17,7 @@ int main(void)
 	while (1)
 	{
 		if (is_interactive)
-			tests();
+			tests(chars_read);
 		else
 		{
 			chars_read = getline(&command, &bufsize, stdin);
