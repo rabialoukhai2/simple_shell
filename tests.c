@@ -1,6 +1,7 @@
 #include "main.h"
 /**
  * tests - f n for testing
+ * @chars_read: read char
  * Return: 1
  */
 
