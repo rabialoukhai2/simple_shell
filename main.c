@@ -16,7 +16,8 @@ int main(void)
 
 	while (1)
 	{
-		if (is_interactive && tests(chars_read)==1) break;
+		if (is_interactive && tests(chars_read) == 1)
+			break;
 		else
 		{
 			chars_read = getline(&command, &bufsize, stdin);
