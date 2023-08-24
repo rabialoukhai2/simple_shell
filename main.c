@@ -1,39 +1,50 @@
-#include "shell.h"
+#include "main.h"
 
 /**
- * main - The main fucntion
+ * main
+ *
+ *
+ *Return: 0 Always
  */
 
 int main(void)
 {
-char *buffer = NULL;
-char **args;
-int value = 1;
-int loop_count = 0;
+	char *command = NULL;
+	size_t bufsize = 0;
+	ssize_t chars_read;
+	char *args[COMMAND_LENGTH];
 
-while (value)
-{
-signal(SIGINT, ctrl_c_hdlr);
+	int is_interactive = isatty(fileno(stdin));
 
-if (isatty(STDIN_FILENO))
-write(STDOUT_FILENO, "$ ", 2);
-
-buffer = read_ln();
-args = parse_ln(buffer);
-value = funct_filter(args, environ);
-free(args);
-free(buffer);
-loop_count++;
-}
-return (0);
-}
-
-/**
- *  ctrl_c_hdlr - Handles ctrl C
- */
-
-void ctrl_c_hdlr(int sig_num __attribute__((unused)))
-{
-signal(SIGINT, ctrl_c_hdlr);
-write(STDOUT_FILENO, "\n$ ", 3);
+	while (1)
+	{
+		if (is_interactive)
+		{
+			printf("($) ");
+			chars_read = getline(&command, &bufsize, stdin);
+			if (chars_read == -1)
+			{
+				if (feof(stdin))
+				{
+					printf("\n");
+					break;
+				}
+				else if (ferror(stdin))
+				{
+					perror("getline");
+					exit(EXIT_FAILURE);
+				}
+			}
+		}
+		else
+		{
+			chars_read = getline(&command, &bufsize, stdin);
+			if (chars_read == -1)
+				break;
+		}
+		command[strcspn(command, "\n")] = '\0';
+		tokenize_command(command, args);
+	}
+	free(command);
+	return (0);
 }
