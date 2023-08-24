@@ -19,23 +19,8 @@ int main(void)
 	while (1)
 	{
 		if (is_interactive)
-		{
-			printf("($) ");
-			chars_read = getline(&command, &bufsize, stdin);
-			if (chars_read == -1)
-			{
-				if (feof(stdin))
-				{
-					printf("\n");
-					break;
-				}
-				else if (ferror(stdin))
-				{
-					perror("getline");
-					exit(EXIT_FAILURE);
-				}
-			}
-		}
+			tests()
+		
 		else
 		{
 			chars_read = getline(&command, &bufsize, stdin);
