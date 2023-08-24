@@ -1,7 +1,7 @@
 #include "main.h"
 /**
- * tests
- *
+ * tests - f n for testing
+ * Return: 1
  */
 int tests()
 {
