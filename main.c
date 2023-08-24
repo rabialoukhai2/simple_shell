@@ -1,15 +1,10 @@
 #include "main.h"
 
 /**
-<<<<<<< HEAD
  * main
  *
  *
  *Return: 0 Always
-=======
- * main - The main fucntion
- * Return: 0
->>>>>>> 8d361ff4292c62c085c80c45e815a10bfda78dfe
  */
 
 int main(void)
@@ -21,7 +16,6 @@ int main(void)
 
 	int is_interactive = isatty(fileno(stdin));
 
-<<<<<<< HEAD
 	while (1)
 	{
 		if (is_interactive)
@@ -53,16 +47,4 @@ int main(void)
 	}
 	free(command);
 	return (0);
-=======
-/**
- *  ctrl_c_hdlr - Handles ctrl C
- * @sig_num: signal
- * Return: file
- */
-
-void ctrl_c_hdlr(int sig_num __attribute__((unused)))
-{
-signal(SIGINT, ctrl_c_hdlr);
-write(STDOUT_FILENO, "\n$ ", 3);
->>>>>>> 8d361ff4292c62c085c80c45e815a10bfda78dfe
 }
