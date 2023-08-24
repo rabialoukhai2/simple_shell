@@ -6,6 +6,7 @@
 
 int tests(void)
 {
+ssize_t chars_read;
 if (chars_read == -1)
 {
 if (feof(stdin))
