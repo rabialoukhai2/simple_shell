@@ -25,8 +25,8 @@ void tokenizer(char *command, char *args[])
 	}
 	args[i] = NULL;
 	if (strcmp(args[0], "exit") == 0)
-	{				
-		exit(0);
+	{
+exit(0);
 	}
 	execute_cmd(args);
 }
